@@ -31,16 +31,16 @@ import {
     ];
   
     return (
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center">
         {socialMediaList.map((item) => (
           <a
             key={item.id}
             href={item.link}
             className={`${
               theme != "dark"
-                ? "border-white text-white"
-                : "border-neutral-600 text-neutral-600"
-            } flex justify-center items-center rounded-full border-2 leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1`}
+                ? " text-white"
+                : " text-neutral-600"
+            } flex justify-center items-center p-2 leading-normal hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out `}
           >
             {item.icon}
           </a>

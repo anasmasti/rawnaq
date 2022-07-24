@@ -5,13 +5,13 @@ import MobileMenuButton from "./MobileMenuButton";
 import MobileMenu from "./MobileMenu";
 import SocialMediaLinks from "../../shared/SocialMediaLinks";
 
-export default function NavBar() {
+export default function Header() {
   return (
-    <>
+    <header>
       <MobileMenu />
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-        <div className="flex justify-between items-center mx-auto">
-          <SocialMediaLinks />
+        <div className="flex justify-between items-center mx-9 mb-5">
+          <SocialMediaLinks theme='dark' />
           <Logo />
           <SearchBar />
           <MobileMenuButton />
@@ -20,6 +20,6 @@ export default function NavBar() {
           <NavItems />
         </div>
       </nav>
-    </>
+    </header>
   );
 }
