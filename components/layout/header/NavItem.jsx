@@ -7,7 +7,7 @@ export default function NavItem({ title, href, icon }) {
         {icon}
       <Link href={href}>
         <a
-          className="block py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-neutral-600 md:p-0 hover:text-red-400"
+          className="block py-2 pr-4 pl-3 text-white rounded md:bg-transparent md:text-neutral-600 md:p-0 hover:text-blue-400"
           data-testid={href}
         >
           {title}
@@ -20,4 +20,5 @@ export default function NavItem({ title, href, icon }) {
 NavItem.propTypes = {
   title: PropTypes.string,
   href: PropTypes.string,
+  icon: PropTypes.any,
 };

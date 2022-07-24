@@ -11,8 +11,7 @@ const MainTitle = ({value,styleClass}) => {
                         text-[32px]
                         sm:text-[40px]
                         lg:text-[36px]
-                        xl:text-4xl
-                        underline decoration-red-500`}
+                        xl:text-4xl`}
       >
         {value}
       </h1>

@@ -52,7 +52,7 @@ export default function NavItems() {
       id: 4,
       title: "Contact",
       href: "/contact",
-      icon: <BiMessageSquareDetail />,
+      icon: <BiMessageSquareDetail className="text-neutral-600" />,
     },
   ];
 
