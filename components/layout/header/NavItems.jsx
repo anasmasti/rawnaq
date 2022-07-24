@@ -20,25 +20,25 @@ export default function NavItems() {
     {
       id: 3,
       title: "Actualités",
-      href: "/Actualites",
+      href: "/actualites/Actualités",
       icon: <BiNews className="text-neutral-600" />,
     },
     {
       id: 4,
       title: "Sports",
-      href: "/sports",
+      href: "/actualites/Sports",
       icon: <BiFootball className="text-neutral-600" />,
     },
     {
       id: 5,
       title: "Économie",
-      href: "/economie",
+      href: "/actualites/Économie",
       icon: <BiLineChart className="text-neutral-600" />,
     },
     {
       id: 6,
       title: "Divertissement",
-      href: "/divertissement",
+      href: "/actualites/Divertissement",
       icon: <BiMovie className="text-neutral-600" />,
     },
     {
