@@ -1,6 +1,6 @@
 import NavItems from "./NavItems";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { hideMobileMenu } from "../../../services/mobile-menu/mobileMenuActions";
+import { hideMobileMenu } from "../../../utils/mobileMenuActions";
 
 export default function MobileMenu() {
   return (
