@@ -4,7 +4,7 @@ export default function Input({ type, name, placeholder, handleInputChange }) {
       type={type}
       name={name}
       placeholder={placeholder}
-      className="p-2 w-full bg-white  placeholder:text-gray-400"
+      className="p-2 w-full bg-white  placeholder:text-gray-400 rounded-sm"
       onChange={(event) => handleInputChange(event.target)}
     />
   );

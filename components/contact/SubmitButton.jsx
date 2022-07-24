@@ -70,7 +70,7 @@ export default function SubmitButton() {
       type="button"
       className={`p-3 ${isDone && "bg-green-500"} ${hasError && "bg-red-500"} ${
         !isDone && !hasError && "bg-blue-400"
-      } rounded-xl text-white font-bold flex justify-center gap-1 transition-all duration-300 delay-75 hover:bg-black`}
+      } rounded-sm text-white font-bold flex justify-center gap-1 transition-all duration-300 delay-75 hover:bg-black`}
       onClick={(e) => handleSubmit(e)}
       disabled={isDone || hasError}
     >

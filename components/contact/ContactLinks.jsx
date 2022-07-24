@@ -47,7 +47,7 @@ export default function ContactLinks() {
           href={link.url}
           target="_blank"
           rel="noreferrer"
-          className={`p-1 flex justify-center items-center gap-1 text-sm bg-cover md:p-2 md:text-md lg:p-2 lg:text-md bg-no-repeat bg-center bg-gray-100 font-bold text-gray-600 transition-all  duration-300 hover:-translate-y-1 `}
+          className={`p-1 rounded-sm flex justify-center items-center gap-1 text-sm bg-cover md:p-2 md:text-md lg:p-2 lg:text-md bg-no-repeat bg-center bg-gray-100 font-bold text-gray-600 transition-all  duration-300 hover:-translate-y-1 `}
         >
           {link.icon} {link.title}
         </a>

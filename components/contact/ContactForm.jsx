@@ -34,7 +34,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="p-10 bg-neutral-100 z-10 relative mt-10 flex">
+    <div className="p-10 bg-neutral-100 z-10 relative mt-10 flex rounded-sm">
       <form className="flex flex-col gap-4 w-full" ref={formRef}>
         <contactFormGlobalContext.Provider
           value={{ formGlobalData, fillFormGlobalData }}
