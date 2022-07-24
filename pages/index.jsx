@@ -18,8 +18,8 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-3 gap-3 p-3 ">
          {
-          [1,2,3].map(()=>(
-            <Card />
+          [1,2,3].map((index)=>(
+            <Card key={index} />
           ))
          }
         </div>

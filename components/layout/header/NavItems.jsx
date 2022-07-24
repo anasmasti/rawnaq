@@ -49,7 +49,7 @@ export default function NavItems() {
     },
 
     {
-      id: 4,
+      id: 14,
       title: "Contact",
       href: "/contact",
       icon: <BiMessageSquareDetail className="text-neutral-600" />,
