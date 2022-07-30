@@ -7,8 +7,8 @@ export default function Actualites() {
   const { category } = router.query;
 
   return (
-    <article>
+    <section>
       <MainTitle value={category} />
-    </article>
+    </section>
   );
 }
