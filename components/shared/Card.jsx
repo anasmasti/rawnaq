@@ -1,5 +1,10 @@
+import Link from "next/link";
+
 export default function Card({ title, content, publishDate, author, image, slug }) {
+  let postLink = `/post/${slug}`
   return (
+    <Link href={postLink}>
+    <a >
     <div className="bg-gray-50 rounded-sm">
       <div>
         <img
@@ -28,5 +33,7 @@ export default function Card({ title, content, publishDate, author, image, slug 
         </p>
       </div>
     </div>
+    </a>
+    </Link>
   );
 }
