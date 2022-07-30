@@ -2,10 +2,32 @@ import React from "react";
 import getAllPosts from "../../services/posts/getAllPosts";
 import getPostBySlug from "../../services/posts/getPostBySlug";
 
-export default function PostDetails({post}) {
+export default function PostDetails({ post }) {
   return (
-    <article>
-      <h1 className="text-black font-bold">{post.title}</h1>
+    <article className="lg:p-20">
+      <h1 className="text-black font-bold lg:text-4xl">{post.title}</h1>
+      <p className="mt-3 text-sm">
+        Publier le :{"  "}
+        <span className="text-gray-400">
+          {new Date(post._createdAt).toLocaleString()}
+        </span>
+        &nbsp;&nbsp;&nbsp; Par : {"  "}{" "}
+        <span className="text-gray-400">{post.author.name}</span>
+      </p>
+      <img
+        className="rounded-sm h-[350px] w-full object-cover mt-4"
+        src={post.mainImage.asset.url}
+        alt={post.slug}
+      />
+      <div className="mt-4">
+        {post.body.map((childContent) =>
+          childContent.children.map((item) => (
+            <p key={item._key} className="text-gray-500">
+              {item.text}
+            </p>
+          ))
+        )}
+      </div>
     </article>
   );
 }

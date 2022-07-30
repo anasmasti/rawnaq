@@ -1,11 +1,11 @@
-export default function Card({ title, content, publishDate, author, image }) {
+export default function Card({ title, content, publishDate, author, image, slug }) {
   return (
     <div className="bg-gray-50 rounded-sm">
       <div>
         <img
           className="rounded-sm h-[250px] w-full object-cover"
           src={image}
-          alt=""
+          alt={slug}
         />
       </div>
       <div className="p-4">
@@ -17,7 +17,7 @@ export default function Card({ title, content, publishDate, author, image }) {
             </p>
           ))}
         </div>
-        <p className="mt-4">
+        <p className="mt-4 text-sm">
           Publier le :{"  "}
           <span className="text-gray-400">
             {new Date(publishDate).toLocaleString()}

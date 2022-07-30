@@ -25,6 +25,7 @@ export default function Home({ posts }) {
               author={post.author}
               publishDate={post._createdAt}
               content={post.body}
+              slug={post.slug.current}
             />
           ))}
         </div>
