@@ -21,9 +21,9 @@ export default function Home({ posts }) {
             <Card
               key={post._id}
               title={post.title}
-              image={post.url}
-              author={post.author}
-              publishDate={post._createdAt}
+              image={post.img}
+              author={post.author.full_name}
+              publishDate={post.createdAt}
               content={post.description}
               slug={post.slug}
             />

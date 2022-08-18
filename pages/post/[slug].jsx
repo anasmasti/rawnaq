@@ -16,10 +16,10 @@ export default function PostDetails({ post }) {
       <p className="mt-3 text-sm">
         Publier le :{"  "}
         <span className="text-gray-400">
-          {new Date(post._createdAt).toLocaleString()}
+          {new Date(post.createdAt).toLocaleString()}
         </span>
         &nbsp;&nbsp;&nbsp; Par : {"  "}{" "}
-        <span className="text-gray-400">Anas</span>
+        <span className="text-gray-400">{post.author.full_name}</span>
       </p>
       <img
         className="rounded-sm h-[350px] w-full object-cover mt-4"
