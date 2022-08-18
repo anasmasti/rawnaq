@@ -21,11 +21,11 @@ export default function Home({ posts }) {
             <Card
               key={post._id}
               title={post.title}
-              image={post.mainImage.asset.url}
+              image={post.url}
               author={post.author}
               publishDate={post._createdAt}
-              content={post.body}
-              slug={post.slug.current}
+              content={post.description}
+              slug={post.slug}
             />
           ))}
         </div>
@@ -35,11 +35,12 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  return getAllPosts().then((posts) => {
-    return {
-      props: {
-        posts: posts,
-      },
-    };
-  });
+  const response = await getAllPosts();
+  const posts = await response.json();
+  
+  return {
+    props: {
+      posts: posts,
+    },
+  };
 }

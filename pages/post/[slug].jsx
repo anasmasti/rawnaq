@@ -7,13 +7,11 @@ import { IoChevronBackSharp } from "react-icons/io5";
 export default function PostDetails({ post }) {
   return (
     <article className="lg:p-20">
-    
-        <Link href="/">
-          <a className="flex items-center font-bold text-gray-400 text-sm mb-5">
-            <IoChevronBackSharp /> <span>Retourner à la page d'accueil</span> 
-          </a>
-        </Link>{" "}
-     
+      <Link href="/">
+        <a className="flex items-center font-bold text-gray-400 text-sm mb-5">
+          <IoChevronBackSharp /> <span>Retourner à la page d'accueil</span>
+        </a>
+      </Link>{" "}
       <h1 className="text-black font-bold lg:text-4xl">{post.title}</h1>
       <p className="mt-3 text-sm">
         Publier le :{"  "}
@@ -21,43 +19,39 @@ export default function PostDetails({ post }) {
           {new Date(post._createdAt).toLocaleString()}
         </span>
         &nbsp;&nbsp;&nbsp; Par : {"  "}{" "}
-        <span className="text-gray-400">{post.author.name}</span>
+        <span className="text-gray-400">Anas</span>
       </p>
       <img
         className="rounded-sm h-[350px] w-full object-cover mt-4"
-        src={post.mainImage.asset.url}
+        src={post.img}
         alt={post.slug}
       />
       <div className="mt-4">
-        {post.body.map((childContent) =>
-          childContent.children.map((item) => (
-            <p key={item._key} className="text-gray-500">
-              {item.text}
-            </p>
-          ))
-        )}
+        <p className="text-gray-500">{post.description}</p>
       </div>
     </article>
   );
 }
 
 export async function getStaticProps({ params }) {
-  return getPostBySlug(params.slug).then((post) => {
-    return {
-      props: {
-        post: post[0],
-      },
-    };
-  });
+  const response = await getPostBySlug(params.slug);
+  const post = await response.json();
+
+  return {
+    props: {
+      post: post,
+    },
+  };
 }
 
 export async function getStaticPaths() {
-  return getAllPosts().then((posts) => {
-    const paths = posts.map((post) => {
-      return {
-        params: { slug: post.slug.current },
-      };
-    });
-    return { paths, fallback: false };
+  const response = await getAllPosts();
+  const posts = await response.json();
+
+  const paths = posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+    };
   });
+  return { paths, fallback: false };
 }

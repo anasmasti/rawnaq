@@ -16,11 +16,9 @@ export default function Card({ title, content, publishDate, author, image, slug 
       <div className="p-4">
         <h2 className="font-bold text-xl">{title}</h2>
         <div>
-          {content[0].children.map((item) => (
-            <p key={item._key} className="text-gray-500">
-              {item.text}
+        <p className="text-gray-500">
+              {content}
             </p>
-          ))}
         </div>
         <p className="mt-4 text-sm">
           Publier le :{"  "}
@@ -29,7 +27,7 @@ export default function Card({ title, content, publishDate, author, image, slug 
           </span>
         </p>
         <p>
-          Par :{"  "} <span className="text-gray-400">{author.name}</span>
+          Par :{"  "} <span className="text-gray-400">Anas</span>
         </p>
       </div>
     </div>
